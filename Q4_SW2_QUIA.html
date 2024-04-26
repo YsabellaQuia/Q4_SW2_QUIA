@@ -16,6 +16,17 @@
             height: 100vh;
         }
 
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+        }
+
+        .calculator-image {
+            margin-right: 20px;
+        }
+
         .form-group {
             margin-bottom: 20px;
         }
@@ -28,6 +39,7 @@
         }
         label {
             font-weight: bold;
+            color: white;
         }
         button {
             color: aliceblue;
@@ -35,33 +47,33 @@
         h2 {
             color: white;
         }
-        label {
-            color: white;
-        }
     </style>
 </head>
 <body>
-    <form class="form-group">
-        <h2 class="text-center mb-4">Calculator</h2>
-        <div class="form-group">
-            <label for="num1">Enter the first number:</label>
-            <input type="number" id="num1" class="form-control" placeholder="Enter a number">
-        </div>
-        <div class="form-group">
-            <label for="num2">Enter the second number:</label>
-            <input type="number" id="num2" class="form-control" placeholder="Enter a number">
-        </div>
+    <div class="container">
+        <img class="calculator-image" src="https://www.iconsdb.com/icons/preview/black/calculator-5-xxl.png" alt="Calculator" height="200">
+        <form class="form-group">
+            <h2 class="text-center mb-4">Calculator</h2>
+            <div class="form-group">
+                <label for="num1">Enter the first number:</label>
+                <input type="number" id="num1" class="form-control" placeholder="Enter a number">
+            </div>
+            <div class="form-group">
+                <label for="num2">Enter the second number:</label>
+                <input type="number" id="num2" class="form-control" placeholder="Enter a number">
+            </div>
 
-        <button type="button" class="btn btn-success" onclick="calculateSum()">Sum</button>
-        <button type="button" class="btn btn-danger" onclick="calculateDifference()">Difference</button>
-        <button type="button" class="btn btn-primary" onclick="calculateProduct()">Product</button>
-        <button type="button" class="btn btn-dark" onclick="calculateQuotient()">Quotient</button>
+            <button type="button" class="btn btn-success" onclick="calculateSum()">Sum</button>
+            <button type="button" class="btn btn-danger" onclick="calculateDifference()">Difference</button>
+            <button type="button" class="btn btn-primary" onclick="calculateProduct()">Product</button>
+            <button type="button" class="btn btn-dark" onclick="calculateQuotient()">Quotient</button>
 
-        <details ontoggle="show()">
-            <summary>Type a text here</summary>
-            <p>Click the buttons to calculate</p>
-        </details>
-    </form>
+            <details ontoggle="show()">
+                <summary>Type a text here</summary>
+                <p>Click the buttons to calculate</p>
+            </details>
+        </form>
+    </div>
 
     <script type="text/javascript">
         function calculateSum(){ 
